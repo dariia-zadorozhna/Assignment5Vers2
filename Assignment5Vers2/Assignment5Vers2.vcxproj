@@ -132,6 +132,9 @@
   <ItemGroup>
     <None Include="..\..\Assignment5\test_script.py" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Assignment5Vers2.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

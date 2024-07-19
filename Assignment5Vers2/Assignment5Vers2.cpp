@@ -1,6 +1,7 @@
 ﻿#include <iostream>
 #include <sstream>
 #include <unordered_set>
+#include <fstream> 
 using namespace std;
 
 enum TokenType {
@@ -219,15 +220,22 @@ private:
 };
 
 
-int main()
-{
-    string input;
-    cout << "Enter an arithmetic expression:" << endl;
-    getline(cin, input);
+int main() {
+    while (true) {
+        string input;
+        cout << "Enter an arithmetic expression or 'exit' to leave: ";
 
-    Interpreter interpreter(input);
-    double result = interpreter.evaluate();
+        getline(cin, input);
 
-    cout << "Answer: " << result << endl;
+        if (input == "exit") {
+            break;
+        }
+
+        Interpreter interpreter(input);
+        double result = interpreter.evaluate();
+
+        cout << ">>> " << result << endl;
+    }
+    return 0;
 }
 
